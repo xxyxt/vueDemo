@@ -1,5 +1,5 @@
 <template>
-    <div style="text-align: center;background-color: rgba(129,86,255,0.35);margin:0 auto;border:1px solid #000;width:600px;height:650px">
+    <div class="roomStyle">
     <br>欢迎使用<strong>VueTest</strong>极简聊天室：<br/><br/>
     <textarea id="content" v-model="content" cols="60" rows="30" readonly="readonly"></textarea><br>
     <input type="text" v-model="message">
@@ -43,15 +43,13 @@ export default {
       this.ws.onclose = function () {
         console.log("连接关闭");
       };
-    },
-    
+    }, 
     webscoketonopen(){
       console.log("与服务器成功建立连接");
     },
     webscoketonmessage(value){
       console.log(value);
       this.content += (value.data + '\r\n') ;
-
     },
     exitRoom(){
       this.closeWebSocket();
@@ -80,7 +78,14 @@ export default {
   }
 }
 </script>
-
 <style>
+.roomStyle{
+  text-align: center;
+  background-color: rgba(15, 161, 230, 0.35);
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 600px;
+  height: 650px
+}
 
 </style>
