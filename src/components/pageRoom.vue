@@ -1,7 +1,7 @@
 <template>
-    <div class="roomStyle">
+  <div class="roomStyle">
     <br>欢迎使用<strong>VueTest</strong>极简聊天室：<br/><br/>
-    <textarea id="content" v-model="content" cols="60" rows="30" readonly="readonly"></textarea><br>
+    <textarea id="content" v-model="content" cols="40" rows="20" readonly="readonly"></textarea><br>
     <input type="text" v-model="message">
     <button type="button" @click="sendMsg()">发送消息</button>
     <br/><br/>
@@ -46,6 +46,7 @@ export default {
     }, 
     webscoketonopen(){
       console.log("与服务器成功建立连接");
+      
     },
     webscoketonmessage(value){
       console.log(value);
@@ -84,8 +85,8 @@ export default {
   background-color: rgba(15, 161, 230, 0.35);
   margin: 0 auto;
   border: 1px solid #000;
-  width: 600px;
-  height: 650px
+  width: auto;
+  height: auto;
 }
 
 </style>

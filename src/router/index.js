@@ -9,14 +9,14 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: login,
-    //   meta: {
-    //     keepAlive: false // 导航栏在该页面显示
-    //   }
-    // },
+    {
+      path: '/login',
+      name: 'login',
+      component: login,
+      meta: {
+        keepAlive: false // 导航栏在该页面显示
+      }
+    },
     {
       path: '/pageRoom',
       name: 'pageRoom',
