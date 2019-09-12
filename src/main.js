@@ -6,7 +6,7 @@ import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 var axios = require('axios')
-axios.defaults.baseURL = 'http://localhost:8080'
+axios.defaults.baseURL = 'http://47.107.38.151:8080'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(iView)

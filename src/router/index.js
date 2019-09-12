@@ -63,7 +63,7 @@ export default new Router({
   ],
   proxyTable: {
     '/api': {
-      target: 'http://localhost:8080',
+      target: 'http://47.107.38.151:8080',
       changeOrigin: true,
       pathRewrite: {
         '^/api': ''

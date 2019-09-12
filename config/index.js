@@ -9,10 +9,10 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {
       '/api':{
-        target:'localhost:8080',
+        target:'47.107.38.151:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
@@ -21,7 +21,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '47.107.38.151', // can be overwritten by process.env.HOST
     port: 6060, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
@@ -58,13 +58,13 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './', 
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false, // 打包的时候改成false
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
